@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .forms import MedicosForm
+from .forms import MedicosForm, PacientesForm, CitasForm, recetasForm
 
 # Create your views here.
 def index(request):
@@ -16,10 +16,28 @@ def medicos(request):
     return render(request, 'SwissMedical/crearMedicos.html', {'form': form})
 
 def pacientes(request):
-    return render(request, 'SwissMedical/crearPacientes.html')
+    if request.method == 'POST':
+        form = PacientesForm(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = PacientesForm()
+    return render(request, 'SwissMedical/crearPacientes.html', {'form': form})
 
 def citas(request):
-    return render(request, 'SwissMedical/crearCitas.html')
+    if request.method == 'POST':
+        form = CitasForm(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = CitasForm()
+    return render(request, 'SwissMedical/crearCitas.html', {'form': form})
 
 def recetas(request):
-    return render(request, 'SwissMedical/crearRecetas.html')
+    if request.method == 'POST':
+        form = recetasForm(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = recetasForm()
+    return render(request, 'SwissMedical/crearRecetas.html', {'form': form})
