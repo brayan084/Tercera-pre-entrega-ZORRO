@@ -1,5 +1,4 @@
 from django.db import models
-from datetime import datetime
 
 # Create your models here.
 
@@ -21,3 +20,4 @@ class recetas(models.Model):
     fecha = models.DateTimeField(auto_now=True)
     descripcion = models.CharField(max_length=50)
     medico = models.ForeignKey(Medicos, on_delete=models.CASCADE)
+    paciente = models.ForeignKey(Pacientes, on_delete=models.CASCADE)

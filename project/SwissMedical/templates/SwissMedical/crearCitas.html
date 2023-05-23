@@ -6,4 +6,10 @@
 {% block content %}
     <link rel="stylesheet" href="{% static 'SwissMedical/css/crear.css' %}">
     <h1 class="cen">Crear Citas</h1>
+    
+    <form action="/citas/" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Crear">
+    </form>
 {% endblock content %}
