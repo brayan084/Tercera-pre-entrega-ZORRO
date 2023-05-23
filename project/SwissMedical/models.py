@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import datetime
 
 # Create your models here.
 
@@ -17,6 +18,6 @@ class Citas(models.Model):
     fecha = models.DateField()
 
 class recetas(models.Model):
-    nombre = models.CharField(max_length=50)
+    fecha = models.DateTimeField(auto_now=True)
     descripcion = models.CharField(max_length=50)
     medico = models.ForeignKey(Medicos, on_delete=models.CASCADE)
