@@ -1,26 +1,10 @@
 {% extends 'navbar.html' %}
+{% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        {% block head %}
-            
-            {% load static %}
-            <meta charset="utf-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-            <meta name="description" content="" />
-            <meta name="author" content="" />
-            <title>Scrolling Nav - Start Bootstrap Template</title>
-            <link rel="icon" type="image/x-icon" href="{% static 'SwissMedical/assets/favicon.ico' %}" />
-            <!-- Core theme CSS (includes Bootstrap)-->
-            <link href="{% static 'SwissMedical/css/styles.css' %}" rel="stylesheet" />
 
-        {% endblock head %}
-    </head>
-    <body id="page-top">
+    {% block content %}
+        <body id="page-top">
 
-        {% block content %}
-            
             <!-- Header-->
             <header class="bg-primary bg-gradient text-white">
                 <div class="container px-4 text-center">
@@ -57,6 +41,6 @@
             <!-- Core theme JS-->
             <script src="{% static 'SwissMedical/js/scripts.js' %}"></script>
             
-        {% endblock content %}
-    </body>
-</html>
+        </body>
+    {% endblock content %}
+
