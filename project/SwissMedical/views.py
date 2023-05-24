@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import MedicosForm, PacientesForm, CitasForm, recetasForm
 from .models import Medicos, Pacientes
 
@@ -18,6 +18,7 @@ def medicos(request):
         form = MedicosForm(request.POST)
         if form.is_valid():
             form.save()
+            return redirect('index')
     else:
         form = MedicosForm()
     return render(request, 'SwissMedical/crearMedicos.html', {'form': form})
@@ -27,6 +28,7 @@ def pacientes(request):
         form = PacientesForm(request.POST)
         if form.is_valid():
             form.save()
+            return redirect('index')
     else:
         form = PacientesForm()
     return render(request, 'SwissMedical/crearPacientes.html', {'form': form})
