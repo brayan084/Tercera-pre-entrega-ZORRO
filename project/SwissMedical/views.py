@@ -1,9 +1,16 @@
 from django.shortcuts import render
 from .forms import MedicosForm, PacientesForm, CitasForm, recetasForm
+from .models import Medicos, Pacientes
 
 # Create your views here.
 def index(request):
-    return render(request, 'SwissMedical/index.html')
+    pacientes_registrados = Pacientes.objects.all()
+    medicos_registrados = Medicos.objects.all()
+    datos = {
+        'medicos': medicos_registrados,
+        'pacientes': pacientes_registrados
+    }
+    return render(request, 'SwissMedical/index.html', datos)
 
 # crear medicos
 def medicos(request):
