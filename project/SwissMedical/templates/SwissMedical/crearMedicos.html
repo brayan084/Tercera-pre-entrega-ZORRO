@@ -10,7 +10,7 @@
     <h1 class="cen">Crear Medicos</h1>
 
 
-    <form action="/medicos/" method="post">
+    <form action="/medicos/" method="post" style="text-align: center">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Crear">

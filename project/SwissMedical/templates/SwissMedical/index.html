@@ -41,7 +41,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-6">
+                <div class="col-4">
 
 
                     <h1>LISTA DE MEDICOS</h1>
@@ -53,7 +53,7 @@
 
 
                 </div>
-                <div class="col-6">
+                <div class="col-4">
 
                     <h1>LISTA DE PACIENTES</h1>
                     <br>
@@ -62,6 +62,15 @@
                     <li class="tamaño">{{ paciente.nombre }} {{ paciente.apellido }}</li>
                     {% endfor %}
 
+                </div>
+                <div class="col-4">
+
+                    <h1>LISTA DE CITAS</h1>
+                    <br>
+                    <br>
+                    {% for cita in citas  %}
+                    <li class="tamaño">El paciente {{ cita.paciente }} tiene una cita con el médico {{ cita.medico }} el dia:  {{ cita.fecha }} </li>
+                    {% endfor %}
 
                 </div>
 
