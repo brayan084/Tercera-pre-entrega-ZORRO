@@ -9,11 +9,14 @@
     <link rel="stylesheet" href=" {% static 'SwissMedical/css/index.css' %} ">
 
     <!-- Header-->
-    <header class="bg-primary bg-gradient text-white">
+    <header class="">
         <div class="container px-4 text-center">
-            <h1 class="fw-bolder">Welcome to Scrolling Nav</h1>
-            <p class="lead">A functional Bootstrap 5 boilerplate for one page scrolling websites</p>
-            <a class="btn btn-lg btn-light" href="#">Start scrolling!</a>
+            <h1 class="tamaño1"> <b>Hospital virtual</b></h1>
+            <p class="tamaño2"><b>Sistema de gestión de pacientes</b></p>
+            <p class="tamaño3"><b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut quia aspernatur omnis quidem dicta provident
+                earum alias magnam autem? Doloribus molestiae accusantium error nobis enim porro repellendus qui
+                voluptatem assumenda!</b></p>
+
         </div>
     </header>
 
@@ -21,10 +24,14 @@
         <div class="row ">
             <div class="col-lg-12 ">
 
-                <a href="{% url 'crearMedicos' %}"><button type="button" class="btn btn-primary btn-lg mt-5"> Crear Medicos </button></a>
-                <a href="{% url 'crearPacientes' %}"><button type="button" class="btn btn-primary btn-lg mt-5"> Crear Pacientes</button></a>
-                <a href="{% url 'crearCitas' %}"><button type="button" class="btn btn-primary btn-lg mt-5"> Hacer Citas</button></a>
-                <a href="{% url 'crearRecetas' %}"><button type="button" class="btn btn-primary btn-lg mt-5"> Crear Recetas</button></a>
+                <a href="{% url 'crearMedicos' %}"><button type="button" class="btn btn-primary btn-lg mt-5"> Crear
+                        Medicos </button></a>
+                <a href="{% url 'crearPacientes' %}"><button type="button" class="btn btn-primary btn-lg mt-5"> Crear
+                        Pacientes</button></a>
+                <a href="{% url 'crearCitas' %}"><button type="button" class="btn btn-primary btn-lg mt-5"> Hacer
+                        Citas</button></a>
+                <a href="{% url 'crearRecetas' %}"><button type="button" class="btn btn-primary btn-lg mt-5"> Crear
+                        Recetas</button></a>
 
             </div>
         </div>
