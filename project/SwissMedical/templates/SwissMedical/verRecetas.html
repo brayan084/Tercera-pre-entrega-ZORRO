@@ -1,0 +1,10 @@
+{% extends 'SwissMedical/navbar.html' %}
+
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'SwissMedical/css/verRecetas.css' %}">
+    <h1>LISTA DE RECETAS</h1>
+    {% for receta in recetas  %}
+        <li class="tamaño">{{ receta.medico }} le receto: <br> {{ receta.descripcion }} <br> al paciente: {{ receta.paciente }} <br> dia de creacion de la receta: {{ receta.fecha }}<br><br> </li>
+    {% endfor %}
+{% endblock content %}

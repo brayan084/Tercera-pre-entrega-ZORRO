@@ -5,8 +5,8 @@
 {% block content %}
 
 <body id="page-top">
-    {% load static %}
-    <link rel="stylesheet" href=" {% static 'SwissMedical/css/index.css' %} ">
+    {% load static %}   
+    <link rel="stylesheet" href="{% static 'SwissMedical/css/home_index.css' %}">
 
     <!-- Header-->
     <header class="">
@@ -24,14 +24,15 @@
         <div class="row ">
             <div class="col-lg-12 ">
 
-                <a href="{% url 'crearMedicos' %}"><button type="button" class="btn btn-primary btn-lg mt-5"> Crear
-                        Medicos </button></a>
-                <a href="{% url 'crearPacientes' %}"><button type="button" class="btn btn-primary btn-lg mt-5"> Crear
-                        Pacientes</button></a>
-                <a href="{% url 'crearCitas' %}"><button type="button" class="btn btn-primary btn-lg mt-5"> Hacer
-                        Citas</button></a>
-                <a href="{% url 'crearRecetas' %}"><button type="button" class="btn btn-primary btn-lg mt-5"> Crear
-                        Recetas</button></a>
+                <a href="{% url 'crearMedicos' %}"><button type="button" class="btn btn-primary btn-lg mt-5"> CrearMedicos </button></a>
+
+                <a href="{% url 'crearPacientes' %}"><button type="button" class="btn btn-primary btn-lg mt-5"> CrearPacientes</button></a>
+
+                <a href="{% url 'crearCitas' %}"><button type="button" class="btn btn-primary btn-lg mt-5"> HacerCitas</button></a>
+
+                <a href="{% url 'crearRecetas' %}"><button type="button" class="btn btn-primary btn-lg mt-5"> CrearRecetas</button></a>
+
+                <a href="{% url 'verRecetas' %}"><button type="button" class="btn btn-primary btn-lg mt-5 espacio">Ver Recetas</button></a>
 
             </div>
         </div>

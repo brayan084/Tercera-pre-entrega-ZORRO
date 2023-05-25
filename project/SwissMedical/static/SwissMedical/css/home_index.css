@@ -19,6 +19,8 @@ header {
     background-image: url(../imagenes/logo.avif);
     background-repeat: no-repeat;
     background-position: center;
+}
 
-
+.espacio {
+    margin-left: 300px;
 }
